@@ -1,0 +1,35 @@
+.card {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 400px;
+    
+    background-color: rgb(121, 42, 59);
+
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+
+.card > p {
+    margin-right: 10px;
+    margin-left: 5px;
+
+    color: white;
+}
+
+.card > button {
+    height: 25px;
+
+    border-radius: 5px;
+    border-style: none;
+    width: 25px;
+
+    margin-right: 5px;
+
+    background-color: rgb(204, 101, 101);
+    color: rgb(131, 40, 40);
+    font-weight: bold;
+}

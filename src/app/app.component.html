@@ -1,0 +1,15 @@
+<header>
+  <h2 id="title">Todolist</h2>
+
+  <ul>
+    <li><a routerLink="/">Todolist</a></li>
+    <li>
+      <a routerLink="/login" *ngIf="!loggedIn">Login</a>
+      <a *ngIf="loggedIn" (click)="logOut()">Logout</a>
+    </li>
+  </ul>
+</header>
+
+<section class="content">
+  <router-outlet></router-outlet>
+</section>

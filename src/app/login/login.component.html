@@ -1,0 +1,9 @@
+<section class="login">
+    <form #form="ngForm" (submit)="login(form)" autocomplete="off">
+        <input type="text" [(ngModel)]="username" name="username" placeholder="Username">
+        <input type="password" [(ngModel)]="password" name="password" placeholder="Password">
+        <button>Login</button>
+    </form>
+    
+    <button (click)="register()">Register</button>
+</section>

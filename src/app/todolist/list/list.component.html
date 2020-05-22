@@ -1,0 +1,7 @@
+<section class="list">
+    <h3>Tasks to finish</h3>
+
+    <div *ngFor="let task of tasks">
+        <app-card [task]="task" (finishTask)="removeFromList($event)"></app-card>
+    </div>
+</section>

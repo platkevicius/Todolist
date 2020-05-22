@@ -1,0 +1,42 @@
+header {
+    display: flex;
+    text-transform: uppercase; 
+
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    background-color: rgb(67, 102, 136);
+
+    padding: 20px;
+}
+
+#title {
+    width: 180px;
+    margin: 0;
+
+    font-size: 30px;
+}
+
+#title:hover {
+    color: rgb(14, 74, 138);
+}
+
+header > ul {
+    display: flex;
+    flex-direction: row;
+
+    margin: 0;
+    float: right;
+}
+
+header > ul > li {
+    margin-left: 15px;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+    cursor: pointer;
+}

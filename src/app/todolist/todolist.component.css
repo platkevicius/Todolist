@@ -1,0 +1,13 @@
+header {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(42, 81, 121);
+}
+
+p {
+    text-transform: uppercase;
+    font-size: 40px;
+}

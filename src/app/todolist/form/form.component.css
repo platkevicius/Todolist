@@ -1,0 +1,44 @@
+form {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 20px;
+}
+
+input {
+    margin-right: 30px;
+
+    border-radius: 15px;
+    border-style: none;
+    border: 2px solid green;
+
+    font-size: 30px;
+
+    width: 375px;
+
+    transition: ease-in-out, width .35s ease-in-out;
+}
+
+input:focus {
+    width: 400px;
+    outline: none;
+}
+
+button {
+    border-radius: 5px;
+    border-style: none;    
+
+    height: 34px;
+    width: 70px;
+
+    background-color: rgb(42, 81, 121);
+    color: green;
+
+    font-size: 20px;
+}
+
+button:focus {
+    outline: none;
+}
