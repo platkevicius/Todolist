@@ -10,6 +10,7 @@ import { CardComponent } from './todolist/list/card/card.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
+import { LoginService } from './services/login.service';
 
 @NgModule({
   declarations: [

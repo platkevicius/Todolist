@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginService } from './services/login.service';
 
 @Component({
   selector: 'app-root',
@@ -8,14 +9,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Todolist';
 
-  loggedIn: boolean = false;
+  constructor(private loginService: LoginService) {}
 
   login() {
-    this.loggedIn = true;
+    this.loginService.login();
   }
 
   logOut() {
-    this.loggedIn = false;
+    this.loginService.logout();
   }
 
 }

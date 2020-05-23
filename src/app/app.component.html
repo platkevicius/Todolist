@@ -4,8 +4,8 @@
   <ul>
     <li><a routerLink="/">Todolist</a></li>
     <li>
-      <a routerLink="/login" *ngIf="!loggedIn">Login</a>
-      <a *ngIf="loggedIn" (click)="logOut()">Logout</a>
+      <a routerLink="/login" *ngIf="!loginService.loggedIn">Login</a>
+      <a *ngIf="loginService.loggedIn" (click)="logOut()">Logout</a>
     </li>
   </ul>
 </header>

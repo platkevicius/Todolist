@@ -1,6 +1,14 @@
-<header>
-    <p>Tasks: {{ needToFinish }}</p>
-</header>
+<div *ngIf="loginService.loggedIn">
+    <header>
+        <p>Tasks: {{ needToFinish }}</p>
+    </header>
 
-<app-form (addToList)="addTask($event)"></app-form>
-<app-list [tasks]="tasks" (remove)="finishTask($event)"></app-list>
+    <app-form (addToList)="addTask($event)"></app-form>
+    <app-list [tasks]="tasks" (remove)="finishTask($event)"></app-list>
+</div>
+
+<div *ngIf="!loginService.loggedIn">
+    <div class="content">
+        You have to first login before you are able to use this service!
+    </div>
+</div>

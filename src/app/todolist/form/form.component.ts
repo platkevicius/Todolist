@@ -17,8 +17,10 @@ export class FormComponent implements OnInit {
   }
 
   addTask(form: NgForm) {
-    this.addToList.emit(this.task);
-    form.reset();
+    if  (this.task !== undefined && this.task !== null) {
+      this.addToList.emit(this.task);
+      form.reset();
+    }
   }
 
 }

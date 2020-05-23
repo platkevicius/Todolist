@@ -1,9 +1,9 @@
 <section class="register">
     <form #form="ngForm">
-        <input type="text" placeholder="Username" autocomplete="off">
-        <input type="email" placeholder="E-mail" autocomplete="off">
-        <input type="password" placeholder="Password">
-        <input type="password" placeholder="Passwordcheck">
-        <button (click)="register">Register</button>
+        <input type="text" placeholder="Username" autocomplete="off" [(ngModel)]="username"  name="username">
+        <input type="email" placeholder="E-mail" autocomplete="off" [(ngModel)]="email" name="email">
+        <input type="password" placeholder="Password" [(ngModel)]="password" name="password">
+        <input type="password" placeholder="Passwordcheck" [ngStyle]="{'border': password !== password_check ? '2px solid red' : '2px solid green'}" [(ngModel)]="password_check" name="password_check">
+        <button (click)="register(form)">Register</button>
     </form>
 </section>
