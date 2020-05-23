@@ -11,11 +11,11 @@ export class LoginService {
 
   login(username: string, password: string) {
     // TODO: backend logic for logging in
+    
     this.loggedIn = true;
   }
 
   logout() {
-    // TODO: backend logic for logging out
     this.loggedIn = false;
   }
 

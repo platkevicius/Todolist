@@ -11,10 +11,6 @@ export class AppComponent {
 
   constructor(private loginService: LoginService) {}
 
-  login() {
-    this.loginService.login();
-  }
-
   logOut() {
     this.loginService.logout();
   }
