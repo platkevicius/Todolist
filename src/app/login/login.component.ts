@@ -23,6 +23,8 @@ export class LoginComponent implements OnInit {
     if (this.username !== undefined && this.username !== null &&
       this.password !== undefined && this.username !== null) {
         
+        console.log(this.password);
+
       this.loginService.login(this.username, this.password);
       
       form.reset(); 

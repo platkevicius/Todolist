@@ -32,8 +32,7 @@ export class RegisterComponent implements OnInit {
       // TODO: CHECK IF EMAIL ALREADY EXISTS
 
       if (this.password_check === this.password) {
-        this.router.navigateByUrl('/');
-        this.loginService.login(form.value[0], form.value[1]);  
+        this.loginService.register(this.username, this.email, this.password); 
       }
     }
   }
