@@ -1,10 +1,10 @@
 <div *ngIf="loginService.loggedIn">
     <header>
-        <p>Tasks: {{ needToFinish }}</p>
+        <p>Tasks: {{ loginService.needToFinish }}</p>
     </header>
 
     <app-form (addToList)="addTask($event)"></app-form>
-    <app-list [tasks]="tasks" (remove)="finishTask($event)"></app-list>
+    <app-list [tasks]="loginService.tasks" (remove)="finishTask($event)"></app-list>
 </div>
 
 <div *ngIf="!loginService.loggedIn">

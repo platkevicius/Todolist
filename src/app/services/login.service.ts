@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../globals/User';
 import { Router } from '@angular/router';
+import { TodoService } from './todo.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +13,14 @@ export class LoginService {
   loadUser: User;
   result: number;
 
+  currentUser: string;
+
+  tasks: string[] = new Array<string>();
+  needToFinish: number = 0;
+
   constructor(private http: HttpClient,
-    private router: Router) { }
+    private router: Router,
+    private todoService: TodoService) { }
 
   login(username: string, password: string) {
     // Gets User from Database
@@ -24,8 +31,16 @@ export class LoginService {
       // Loggs user in
       if (this.loadUser.password == password) {
         this.loggedIn = true
-        
+        this.currentUser = username;
+
         this.router.navigateByUrl('/');
+
+        this.todoService.loadItems(this.currentUser)
+        .subscribe(loadedTasks => {
+          this.tasks = loadedTasks;
+          this.needToFinish = loadedTasks.length;
+        });
+
       }
     });
   }

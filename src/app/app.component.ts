@@ -9,7 +9,7 @@ import { LoginService } from './services/login.service';
 export class AppComponent {
   title = 'Todolist';
 
-  constructor(private loginService: LoginService) {}
+  constructor(public loginService: LoginService) {}
 
   logOut() {
     this.loginService.logout();

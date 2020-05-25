@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../services/login.service';
+import { TodoService } from '../services/todo.service';
 
 @Component({
   selector: 'app-todolist',
@@ -8,25 +9,22 @@ import { LoginService } from '../services/login.service';
 })
 export class TodolistComponent implements OnInit {
 
-  tasks: string[] = new Array<string>();
-
-  // load this later in through Database
-  needToFinish: number = 0;
-
-  constructor(private loginService: LoginService) { }
+  constructor(public loginService: LoginService,
+    private todoService: TodoService) { }
 
   ngOnInit(): void {
+    
   }
 
   //later add db adding
   addTask(task: string) {
-      this.tasks.push(task);
-      this.needToFinish++;
+      this.loginService.tasks.push(task);
+      this.loginService.needToFinish++;
   }
 
   finishTask(task: string) {
-    this.tasks.splice(this.tasks.indexOf(task), 1);
-    this.needToFinish--;
+    this.loginService.tasks.splice(this.loginService.tasks.indexOf(task), 1);
+    this.loginService.needToFinish--;
   }
 
 }
