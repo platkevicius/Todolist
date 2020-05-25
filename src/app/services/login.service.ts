@@ -24,7 +24,7 @@ export class LoginService {
 
   login(username: string, password: string) {
     // Gets User from Database
-    this.http.get<User>('http://localhost:8080/login/daniel')
+    this.http.get<User>('http://localhost:8080/login/' + username)
     .subscribe(user => {
       this.loadUser = user
      
